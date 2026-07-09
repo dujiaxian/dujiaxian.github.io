@@ -85,9 +85,9 @@ const developer = {
 <!-- 把 你的用户名 替换为你的 GitHub 用户名 -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/你的用户名/你的用户名/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/你的用户名/你的用户名/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/你的用户名/你的用户名/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dujiaxian/dujiaxian/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dujiaxian/dujiaxian/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/dujiaxian/dujiaxian/output/github-snake-dark.svg" />
   </picture>
 </div>
 
