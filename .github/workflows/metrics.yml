@@ -1,0 +1,60 @@
+# GitHub Metrics 数据面板（可选）
+# 使用前需要：
+# 1. 创建 Classic Token（必须是 ghp_ 开头的 Classic Token，不能用 Fine-grained）
+# 2. 在仓库 Settings → Secrets → Actions 添加 METRICS_TOKEN
+# 3. 修改下面的 user: 为你的用户名
+# 4. 如果使用 WakaTime，还需要配置 plugin_wakatime_user
+
+name: Metrics
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+  push: {branches: ["master", "main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # ========== 必须修改 ==========
+          user: 你的用户名  # 改成你的 GitHub 用户名
+
+          # ========== 基础配置 ==========
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Shanghai
+          config_padding: 6%
+          optimize: svg
+          experimental_features: --optimize-svg
+
+          # ========== 插件配置 ==========
+
+          # 3D 贡献日历
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # 语言分析
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 6
+
+          # 代码行数
+          plugin_lines: yes
+
+          # Star 趋势
+          plugin_stargazers: yes
+          plugin_stargazers_charts_type: chartist
+
+          # ========== WakaTime（可选）==========
+          # 如果你用 WakaTime 追踪编码时间，取消下面的注释并修改用户名
+          # plugin_wakatime: yes
+          # plugin_wakatime_days: 7
+          # plugin_wakatime_limit: 4
+          # plugin_wakatime_sections: time, languages
+          # plugin_wakatime_url: https://wakatime.com
+          # plugin_wakatime_user: 你的WakaTime用户名
