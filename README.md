@@ -5,7 +5,7 @@
 <!-- 动态波浪banner -->
 <!-- 修改 text= 后面的文字为你的名称 -->
 <!-- 修改 desc= 后面的文字为你的口号 -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,2,5,30&height=180&section=header&text=你的名称&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Your%20Slogan%20Here&descSize=18&descAlignY=55"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,2,5,30&height=180&section=header&text=Du Jiaxian&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Come ON！Go！Go！Go！%20Slogan%20Here&descSize=18&descAlignY=55"/>
 
 <!-- 打字动画 -->
 <!-- 在线编辑器：https://readme-typing-svg.demolab.com/demo/ -->
