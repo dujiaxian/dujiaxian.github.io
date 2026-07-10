@@ -22,7 +22,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # ========== 必须修改 ==========
-          user: 你的用户名  # 改成你的 GitHub 用户名
+          user: dujiaxian  # 改成你的 GitHub 用户名
 
           # ========== 基础配置 ==========
           template: classic
